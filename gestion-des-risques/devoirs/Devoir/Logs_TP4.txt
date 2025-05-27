@@ -1,0 +1,533 @@
+
+User@DESKTOP-JFJE8Q0 MINGW64 ~
+$ pwd
+/c/Users/User
+
+User@DESKTOP-JFJE8Q0 MINGW64 ~
+$ ls
+ AppData/
+'Application Data'@
+ Contacts/
+ Cookies@
+ Desktop/
+ Documents/
+ Downloads/
+ Favorites/
+ IntelGraphicsProfiles/
+ Links/
+'Local Settings'@
+ Music/
+'My Documents'@
+ NTUSER.DAT
+ NTUSER.DAT{5ce419ef-4f6a-11ef-a813-f875a43e41cc}.TM.blf
+ NTUSER.DAT{5ce419ef-4f6a-11ef-a813-f875a43e41cc}.TMContainer00000000000000000001.regtrans-ms
+ NTUSER.DAT{5ce419ef-4f6a-11ef-a813-f875a43e41cc}.TMContainer00000000000000000002.regtrans-ms
+ NetHood@
+ OneDrive/
+ Pictures/
+ PrintHood@
+ Recent@
+'Saved Games'/
+ Searches/
+ SendTo@
+'Start Menu'@
+ Templates@
+ Videos/
+ ntuser.dat.LOG1
+ ntuser.dat.LOG2
+ ntuser.ini
+
+User@DESKTOP-JFJE8Q0 MINGW64 ~
+$ cd /Documents
+bash: cd: /Documents: No such file or directory
+
+User@DESKTOP-JFJE8Q0 MINGW64 ~
+$ cd Documents
+
+User@DESKTOP-JFJE8Q0 MINGW64 ~/Documents
+$ ls
+ DESS/  'My Music'@  'My Pictures'@  'My Videos'@   desktop.ini
+
+User@DESKTOP-JFJE8Q0 MINGW64 ~/Documents
+$ cd DESS
+
+User@DESKTOP-JFJE8Q0 MINGW64 ~/Documents/DESS
+$ ls
+GRI/
+
+User@DESKTOP-JFJE8Q0 MINGW64 ~/Documents/DESS
+$ cd GRI
+
+User@DESKTOP-JFJE8Q0 MINGW64 ~/Documents/DESS/GRI
+$ ls
+Chapitre1.pdf
+
+User@DESKTOP-JFJE8Q0 MINGW64 ~/Documents/DESS/GRI
+$ mkdir mon-projet-git
+
+User@DESKTOP-JFJE8Q0 MINGW64 ~/Documents/DESS/GRI
+$ ls
+Chapitre1.pdf  mon-projet-git/
+
+User@DESKTOP-JFJE8Q0 MINGW64 ~/Documents/DESS/GRI
+$ cd mon-projet-git
+
+User@DESKTOP-JFJE8Q0 MINGW64 ~/Documents/DESS/GRI/mon-projet-git
+$ echo "Bonsoir Ce projet est vraiment interessant." > index.txt
+
+User@DESKTOP-JFJE8Q0 MINGW64 ~/Documents/DESS/GRI/mon-projet-git
+$ git init
+Initialized empty Git repository in C:/Users/User/Documents/DESS/GRI/mon-projet-git/.git/
+
+User@DESKTOP-JFJE8Q0 MINGW64 ~/Documents/DESS/GRI/mon-projet-git (master)
+$ ls
+index.txt
+
+User@DESKTOP-JFJE8Q0 MINGW64 ~/Documents/DESS/GRI/mon-projet-git (master)
+$ git add index.txt
+warning: in the working copy of 'index.txt', LF will be replaced by CRLF the next time Git touches it
+
+User@DESKTOP-JFJE8Q0 MINGW64 ~/Documents/DESS/GRI/mon-projet-git (master)
+$ ls
+index.txt
+
+User@DESKTOP-JFJE8Q0 MINGW64 ~/Documents/DESS/GRI/mon-projet-git (master)
+$ echo "Ceci est mon premier fichier versionné avec Git." > index.txt
+
+User@DESKTOP-JFJE8Q0 MINGW64 ~/Documents/DESS/GRI/mon-projet-git (master)
+$ echo "J'ai fait une modification" >> index.txt
+
+User@DESKTOP-JFJE8Q0 MINGW64 ~/Documents/DESS/GRI/mon-projet-git (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   index.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.txt
+
+
+User@DESKTOP-JFJE8Q0 MINGW64 ~/Documents/DESS/GRI/mon-projet-git (master)
+$ git diff
+warning: in the working copy of 'index.txt', LF will be replaced by CRLF the next time Git touches it
+diff --git a/index.txt b/index.txt
+index 2d1be09..de2f88e 100644
+--- a/index.txt
++++ b/index.txt
+@@ -1 +1,2 @@
+-Bonsoir Ce projet est vraiment interessant.
++Ceci est mon premier fichier versionné avec Git.
++J'ai fait une modification
+
+User@DESKTOP-JFJE8Q0 MINGW64 ~/Documents/DESS/GRI/mon-projet-git (master)
+$ git restore index.txt
+
+User@DESKTOP-JFJE8Q0 MINGW64 ~/Documents/DESS/GRI/mon-projet-git (master)
+$ git diff
+
+User@DESKTOP-JFJE8Q0 MINGW64 ~/Documents/DESS/GRI/mon-projet-git (master)
+$ echo "# Mon Projet Git\nPetit test de versionnage avec Git." > README.md
+
+User@DESKTOP-JFJE8Q0 MINGW64 ~/Documents/DESS/GRI/mon-projet-git (master)
+$ git add README.md
+warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
+
+User@DESKTOP-JFJE8Q0 MINGW64 ~/Documents/DESS/GRI/mon-projet-git (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   README.md
+        new file:   index.txt
+
+
+User@DESKTOP-JFJE8Q0 MINGW64 ~/Documents/DESS/GRI/mon-projet-git (master)
+$ git commit -m "Ajout du fichier README.md"
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'User@DESKTOP-JFJE8Q0.(none)')
+
+User@DESKTOP-JFJE8Q0 MINGW64 ~/Documents/DESS/GRI/mon-projet-git (master)
+$  git config --global user.email "egzaellabady@gmail.com
+> git config --global user.name "Egzael LABADY"
+>
+> Omit --global
+> ^C
+
+User@DESKTOP-JFJE8Q0 MINGW64 ~/Documents/DESS/GRI/mon-projet-git (master)
+$
+
+User@DESKTOP-JFJE8Q0 MINGW64 ~/Documents/DESS/GRI/mon-projet-git (master)
+$ git add .
+
+User@DESKTOP-JFJE8Q0 MINGW64 ~/Documents/DESS/GRI/mon-projet-git (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   README.md
+        new file:   index.txt
+
+
+User@DESKTOP-JFJE8Q0 MINGW64 ~/Documents/DESS/GRI/mon-projet-git (master)
+$ git commit -m "commit avant ajouter au repo git hub"
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'User@DESKTOP-JFJE8Q0.(none)')
+
+User@DESKTOP-JFJE8Q0 MINGW64 ~/Documents/DESS/GRI/mon-projet-git (master)
+$ ^[[200~https://github.com/Egzaellabady/mon-projet~                            bash: https://github.com/Egzaellabady/mon-projet~: No such file or directory
+
+User@DESKTOP-JFJE8Q0 MINGW64 ~/Documents/DESS/GRI/mon-projet-git (master)
+$ ^[[200~https://github.com/Egzaellabady/mon-projet.git
+bash: https://github.com/Egzaellabady/mon-projet.git: No such file or directory
+
+User@DESKTOP-JFJE8Q0 MINGW64 ~/Documents/DESS/GRI/mon-projet-git (master)
+$ https://github.com/Egzaellabady/mon-projet.git
+bash: https://github.com/Egzaellabady/mon-projet.git: No such file or directory
+
+User@DESKTOP-JFJE8Q0 MINGW64 ~/Documents/DESS/GRI/mon-projet-git (master)
+$ git remote add origin https://github.com/ton-nom-utilisateur/mon-projet.git
+
+User@DESKTOP-JFJE8Q0 MINGW64 ~/Documents/DESS/GRI/mon-projet-git (master)
+$ git push -u origin master
+error: src refspec master does not match any
+error: failed to push some refs to 'https://github.com/ton-nom-utilisateur/mon-projet.git'
+
+User@DESKTOP-JFJE8Q0 MINGW64 ~/Documents/DESS/GRI/mon-projet-git (master)
+$ git branch
+
+User@DESKTOP-JFJE8Q0 MINGW64 ~/Documents/DESS/GRI/mon-projet-git (master)
+$ git push -u origin master
+error: src refspec master does not match any
+error: failed to push some refs to 'https://github.com/ton-nom-utilisateur/mon-projet.git'
+
+User@DESKTOP-JFJE8Q0 MINGW64 ~/Documents/DESS/GRI/mon-projet-git (master)
+$ git branch -m master main
+
+User@DESKTOP-JFJE8Q0 MINGW64 ~/Documents/DESS/GRI/mon-projet-git (main)
+$ git branch
+
+User@DESKTOP-JFJE8Q0 MINGW64 ~/Documents/DESS/GRI/mon-projet-git (main)
+$ git push -u origin main
+error: src refspec main does not match any
+error: failed to push some refs to 'https://github.com/ton-nom-utilisateur/mon-projet.git'
+
+User@DESKTOP-JFJE8Q0 MINGW64 ~/Documents/DESS/GRI/mon-projet-git (main)
+$ git status
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   README.md
+        new file:   index.txt
+
+
+User@DESKTOP-JFJE8Q0 MINGW64 ~/Documents/DESS/GRI/mon-projet-git (main)
+$ git add .
+
+User@DESKTOP-JFJE8Q0 MINGW64 ~/Documents/DESS/GRI/mon-projet-git (main)
+$ git status
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   README.md
+        new file:   index.txt
+
+
+User@DESKTOP-JFJE8Q0 MINGW64 ~/Documents/DESS/GRI/mon-projet-git (main)
+$ git commit -m "Premier commit"
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'User@DESKTOP-JFJE8Q0.(none)')
+
+User@DESKTOP-JFJE8Q0 MINGW64 ~/Documents/DESS/GRI/mon-projet-git (main)
+$ git config --global user.name "Egzael LABADY"
+
+User@DESKTOP-JFJE8Q0 MINGW64 ~/Documents/DESS/GRI/mon-projet-git (main)
+$ git config --global user.email "egzaellabady@gmail.com"
+
+User@DESKTOP-JFJE8Q0 MINGW64 ~/Documents/DESS/GRI/mon-projet-git (main)
+$ git commit -m "Premier commit"
+[main (root-commit) 011c133] Premier commit
+ 2 files changed, 2 insertions(+)
+ create mode 100644 README.md
+ create mode 100644 index.txt
+
+User@DESKTOP-JFJE8Q0 MINGW64 ~/Documents/DESS/GRI/mon-projet-git (main)
+$ git push -u origin main
+
+
+User@DESKTOP-JFJE8Q0 MINGW64 ~/Documents/DESS/GRI/mon-projet-git (main)
+$ git push -u origin main
+info: please complete authentication in your browser...
+remote: Repository not found.
+fatal: repository 'https://github.com/ton-nom-utilisateur/mon-projet.git/' not found
+
+User@DESKTOP-JFJE8Q0 MINGW64 ~/Documents/DESS/GRI/mon-projet-git (main)
+$ git push -u origin main
+info: please complete authentication in your browser...
+remote: Repository not found.
+fatal: repository 'https://github.com/ton-nom-utilisateur/mon-projet.git/' not found
+
+User@DESKTOP-JFJE8Q0 MINGW64 ~/Documents/DESS/GRI/mon-projet-git (main)
+$ git remote -v
+origin  https://github.com/ton-nom-utilisateur/mon-projet.git (fetch)
+origin  https://github.com/ton-nom-utilisateur/mon-projet.git (push)
+
+User@DESKTOP-JFJE8Q0 MINGW64 ~/Documents/DESS/GRI/mon-projet-git (main)
+$ git remote set-url origin https://github.com/egzaellabady/mon-projet.git      
+User@DESKTOP-JFJE8Q0 MINGW64 ~/Documents/DESS/GRI/mon-projet-git (main)
+$ git remote -v
+origin  https://github.com/egzaellabady/mon-projet.git (fetch)
+origin  https://github.com/egzaellabady/mon-projet.git (push)
+
+User@DESKTOP-JFJE8Q0 MINGW64 ~/Documents/DESS/GRI/mon-projet-git (main)
+$ git push -u origin main
+info: please complete authentication in your browser...
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 363 bytes | 363.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: This repository moved. Please use the new location:
+remote:   https://github.com/Egzaellabady/mon-projet.git
+To https://github.com/egzaellabady/mon-projet.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+
+User@DESKTOP-JFJE8Q0 MINGW64 ~/Documents/DESS/GRI/mon-projet-git (main)
+$ git checkout -b nouvelle-fonction
+Switched to a new branch 'nouvelle-fonction'
+
+User@DESKTOP-JFJE8Q0 MINGW64 ~/Documents/DESS/GRI/mon-projet-git (nouvelle-fonction)
+$ touch fonction.py
+
+User@DESKTOP-JFJE8Q0 MINGW64 ~/Documents/DESS/GRI/mon-projet-git (nouvelle-fonction)
+$ git add fonction.py
+
+User@DESKTOP-JFJE8Q0 MINGW64 ~/Documents/DESS/GRI/mon-projet-git (nouvelle-fonction)
+$ git commit -m "Ajout de fonction.py"
+[nouvelle-fonction e3294f6] Ajout de fonction.py
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 fonction.py
+
+User@DESKTOP-JFJE8Q0 MINGW64 ~/Documents/DESS/GRI/mon-projet-git (nouvelle-fonction)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+User@DESKTOP-JFJE8Q0 MINGW64 ~/Documents/DESS/GRI/mon-projet-git (main)
+$ git merge nouvelle-fonction
+Updating 011c133..e3294f6
+Fast-forward
+ fonction.py | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 fonction.py
+
+User@DESKTOP-JFJE8Q0 MINGW64 ~/Documents/DESS/GRI/mon-projet-git (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+User@DESKTOP-JFJE8Q0 MINGW64 ~/Documents/DESS/GRI/mon-projet-git (main)
+$ git push origin main
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 330 bytes | 330.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: This repository moved. Please use the new location:
+remote:   https://github.com/Egzaellabady/mon-projet.git
+To https://github.com/egzaellabady/mon-projet.git
+   011c133..e3294f6  main -> main
+
+User@DESKTOP-JFJE8Q0 MINGW64 ~/Documents/DESS/GRI/mon-projet-git (main)
+$ git checkout -b update-index
+Switched to a new branch 'update-index'
+
+User@DESKTOP-JFJE8Q0 MINGW64 ~/Documents/DESS/GRI/mon-projet-git (update-index)
+$ nano index.txt
+
+User@DESKTOP-JFJE8Q0 MINGW64 ~/Documents/DESS/GRI/mon-projet-git (update-index)
+$ nano index.txt
+
+User@DESKTOP-JFJE8Q0 MINGW64 ~/Documents/DESS/GRI/mon-projet-git (update-index)
+$ git checkout main
+M       index.txt
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+User@DESKTOP-JFJE8Q0 MINGW64 ~/Documents/DESS/GRI/mon-projet-git (main)
+$ nano index.txt
+
+User@DESKTOP-JFJE8Q0 MINGW64 ~/Documents/DESS/GRI/mon-projet-git (main)
+$ nano index.txt
+
+User@DESKTOP-JFJE8Q0 MINGW64 ~/Documents/DESS/GRI/mon-projet-git (main)
+$ git add index.txt
+
+User@DESKTOP-JFJE8Q0 MINGW64 ~/Documents/DESS/GRI/mon-projet-git (main)
+$ git commit -m "Ajout d'une ligne à index.txt sur main"
+[main 459d3a8] Ajout d'une ligne à index.txt sur main
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+User@DESKTOP-JFJE8Q0 MINGW64 ~/Documents/DESS/GRI/mon-projet-git (main)
+$ git checkout -b update-index
+fatal: a branch named 'update-index' already exists
+
+User@DESKTOP-JFJE8Q0 MINGW64 ~/Documents/DESS/GRI/mon-projet-git (main)
+$ git checkout update-index
+Switched to branch 'update-index'
+
+User@DESKTOP-JFJE8Q0 MINGW64 ~/Documents/DESS/GRI/mon-projet-git (update-index)
+$ nano index.txt
+
+User@DESKTOP-JFJE8Q0 MINGW64 ~/Documents/DESS/GRI/mon-projet-git (update-index)
+$ nano index.txt
+
+User@DESKTOP-JFJE8Q0 MINGW64 ~/Documents/DESS/GRI/mon-projet-git (update-index)
+$ nano index.txt
+
+User@DESKTOP-JFJE8Q0 MINGW64 ~/Documents/DESS/GRI/mon-projet-git (update-index)
+$ git add index.txt
+
+User@DESKTOP-JFJE8Q0 MINGW64 ~/Documents/DESS/GRI/mon-projet-git (update-index)
+$ git commit -m "Modification de la ligne dans index.txt sur update-index"
+[update-index 1bd0c42] Modification de la ligne dans index.txt sur update-index
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+User@DESKTOP-JFJE8Q0 MINGW64 ~/Documents/DESS/GRI/mon-projet-git (update-index)
+$ git checkout main
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+User@DESKTOP-JFJE8Q0 MINGW64 ~/Documents/DESS/GRI/mon-projet-git (main)
+$ git merge update-index
+Auto-merging index.txt
+CONFLICT (content): Merge conflict in index.txt
+Automatic merge failed; fix conflicts and then commit the result.
+
+User@DESKTOP-JFJE8Q0 MINGW64 ~/Documents/DESS/GRI/mon-projet-git (main|MERGING)
+$ nano index.txt
+
+User@DESKTOP-JFJE8Q0 MINGW64 ~/Documents/DESS/GRI/mon-projet-git (main|MERGING)
+$ nano index.txt
+
+User@DESKTOP-JFJE8Q0 MINGW64 ~/Documents/DESS/GRI/mon-projet-git (main|MERGING)
+$ git add index.txt
+
+User@DESKTOP-JFJE8Q0 MINGW64 ~/Documents/DESS/GRI/mon-projet-git (main|MERGING)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+All conflicts fixed but you are still merging.
+  (use "git commit" to conclude merge)
+
+Changes to be committed:
+        modified:   index.txt
+
+
+User@DESKTOP-JFJE8Q0 MINGW64 ~/Documents/DESS/GRI/mon-projet-git (main|MERGING)
+$ git commit -m "Résolution du conflit dans index.txt"
+[main 028ef4b] Résolution du conflit dans index.txt
+
+User@DESKTOP-JFJE8Q0 MINGW64 ~/Documents/DESS/GRI/mon-projet-git (main)
+$ git push origin main
+Enumerating objects: 11, done.
+Counting objects: 100% (11/11), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (8/8), done.
+Writing objects: 100% (9/9), 929 bytes | 309.00 KiB/s, done.
+Total 9 (delta 4), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (4/4), completed with 1 local object.
+remote: This repository moved. Please use the new location:
+remote:   https://github.com/Egzaellabady/mon-projet.git
+To https://github.com/egzaellabady/mon-projet.git
+   e3294f6..028ef4b  main -> main
+
+User@DESKTOP-JFJE8Q0 MINGW64 ~/Documents/DESS/GRI/mon-projet-git (main)
+$ git add README.md
+
+User@DESKTOP-JFJE8Q0 MINGW64 ~/Documents/DESS/GRI/mon-projet-git (main)
+$ nano README.md
+
+User@DESKTOP-JFJE8Q0 MINGW64 ~/Documents/DESS/GRI/mon-projet-git (main)
+$ git add README.md
+warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
+
+User@DESKTOP-JFJE8Q0 MINGW64 ~/Documents/DESS/GRI/mon-projet-git (main)
+$ git commit -m "Ajout d'un README amélioré"
+[main 23c4a6a] Ajout d'un README amélioré
+ 1 file changed, 46 insertions(+), 1 deletion(-)
+
+User@DESKTOP-JFJE8Q0 MINGW64 ~/Documents/DESS/GRI/mon-projet-git (main)
+$ git push origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 1.05 KiB | 1.05 MiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: This repository moved. Please use the new location:
+remote:   https://github.com/Egzaellabady/mon-projet.git
+To https://github.com/egzaellabady/mon-projet.git
+   028ef4b..23c4a6a  main -> main
+
+User@DESKTOP-JFJE8Q0 MINGW64 ~/Documents/DESS/GRI/mon-projet-git (main)
+$
