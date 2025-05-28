@@ -1,0 +1,1 @@
+Cette ligne est ajoutée sur la branche main, puis modifiée sur la branche update-index.
